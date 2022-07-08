@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nascionalidade</title>
+    <style>
+        body{
+            background-color: rgba(25, 146, 72, 0.801);
+            color: white;
+            font: normal 18pt Arial;
+        }
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Você é brasileiro ou estrangiero:</h1>
+    Qual é seu país? <input type="text" name="pais" id="pais"> <input type="button" value="Nascionalidade" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular(){
+            var pais = document.getElementById('pais')
+            var res = document.getElementById('res')
+            var resultado = String(pais.value)
+            if (resultado == 'brasil'){
+                res.innerHTML = `Você é <span>brasileiro!</span>`
+            }else{
+                res.innerHTML = `Você é <span>estrangeiro!</span>`
+            }
+        }
+    </script>
+</body>
+</html>
